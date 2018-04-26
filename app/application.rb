@@ -8,3 +8,9 @@ class Application
       item = @@items.find {|i| i.name == item_name}
       resp.write item.price
       resp.status = 200
+    else
+      resp.status = 404
+    end
+    resp.finish
+  end
+end
